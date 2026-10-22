@@ -1,51 +1,395 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Dashboard</title>
-    <!-- 独自のCSSファイルを読み込み -->
-    <link rel="stylesheet" href="./style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>令和ランド OFFICIAL SITE</title>
+  <meta name="description" content="お笑いコンビ「令和ランド」の公式サイト。ライブ情報、プロフィール、動画、グッズ情報をお届けします。">
+  
+  <!-- Google Fonts: Noto Sans JP & Noto Serif JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <body>
-    <div class="dashboard-container">
-      <!-- 左サイドバー (固定) -->
-      <aside class="sidebar">
-        <div class="sidebar-header">
-          <a href="#" class="sidebar-home" data-tab="home">
-            <span class="ri-home-line"></span>
-            <span>Home</span>
-          </a>
-        </div>  
-      </aside>
+  <!-- ==========================================
+      コンビ設定（仮）
+      - コンビ名：令和ランド
+      - 結成：2020年
+      - ばいく：ボケ・ネタ作り / 東京都出身
+      - パイプ：ツッコミ / 神奈川県出身
+  =========================================== -->
 
-      <!-- 右メインコンテンツ (スクロール可) -->
-      <main class="main-content">
-        <!-- ホームセクション -->
-        <section class="content-section" id="home">
-          <header class="section-header">
-            <div class="profile-circle">
-              <span class="ri-user-smile-line"></span>
-            </div>
-            <h1 class="section-title">Welcome to Your Personal Dashboard</h1>
-            <p class="section-subtitle">
-              Make your daily life more convenient and enjoyable
-            </p>
-          </header>
-          <div class="section-body">
-            <div class="section-description">
-              <p>
-                This dashboard is a tool to enrich your daily life. You can easily use essential features such as diary entries, memo management, and checking weather information.
-              </p>
-              <p>
-                Small daily records become irreplaceable memories, and efficient task management leads to fulfilling days. Please use this as a partner that supports your everyday life.
-              </p>
-            </div>
-          </div>
-        </section>
-        <!-- End ホームセクション -->
-      </main>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">令和ランド</a>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="#news">NEWS</a></li>
+          <li><a href="#profile">PROFILE</a></li>
+          <li><a href="#live">LIVE</a></li>
+          <li><a href="#video">VIDEO</a></li>
+          <li><a href="#goods">GOODS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
     </div>
-  </body>
+  </header>
+
+  <main>
+    <!-- ヒーローセクション -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero__sub">OFFICIAL WEBSITE</p>
+        <h1 class="hero__title">令和<br>ランド</h1>
+        <p class="hero__catch">おれたちがいちばんおもしろいのかも</p>
+
+        <!-- メインビジュアル プレースホルダー -->
+        <!-- 【画像差し替え箇所】src属性を実際の写真パスに変更してください -->
+        <div class="hero__visual-placeholder" aria-label="令和ランド メインビジュアル枠">
+          <span>MAIN VISUAL PLACEHOLDER<br>(1200 x 675px 推奨)</span>
+        </div>
+
+        <div class="hero__scroll">SCROLL</div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="section section--dark">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">01</span>
+          <h2 class="section__title">NEWS</h2>
+        </div>
+        <ul class="news-list">
+          <li class="news-list__item">
+            <time datetime="2026-10-20" class="news-list__date">2026.10.20</time>
+            <span class="news-list__category">LIVE</span>
+            <a href="#live" class="news-list__text">第4回単独公演「RE：REIWALAND」チケット一般販売が開始しました（完売したらすみません）。</a>
+          </li>
+          <li class="news-list__item">
+            <time datetime="2026-10-15" class="news-list__date">2026.10.15</time>
+            <span class="news-list__category">MEDIA</span>
+            <a href="#links" class="news-list__text">公式ポッドキャスト「令和ランドのTHE様子」第50回を更新。テーマは「現代社会とエスカレーターの歩く位置」です。</a>
+          </li>
+          <li class="news-list__item">
+            <time datetime="2026-10-01" class="news-list__date">2026.10.01</time>
+            <span class="news-list__category">GOODS</span>
+            <a href="#goods" class="news-list__text">新作オフィシャルグッズ「主張の激しくないロンT」通信販売を開始いたしました。</a>
+          </li>
+          <li class="news-list__item">
+            <time datetime="2026-09-12" class="news-list__date">2026.09.12</time>
+            <span class="news-list__category">INFO</span>
+            <a href="#" class="news-list__text">公式サイトを開設しました。実用的なコンテンツと、特に意味のない雑談をお届けします。</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROFILE -->
+    <section id="profile" class="section section--light">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">02</span>
+          <h2 class="section__title">PROFILE</h2>
+        </div>
+
+        <p class="profile__bio">
+          2020年結成。現代社会の歪みや日常の違和感を、知的な語り口と適度な脱力感で紐解くしゃべくり漫才コンビ。お互いに「自分が一番まともだ」と思い込みながらマイクの前に立っている。
+        </p>
+
+        <div class="profile-grid">
+          <!-- メンバー1 -->
+          <article class="profile-card">
+            <!-- 【画像差し替え箇所】ばいくの顔写真 -->
+            <div class="profile-card__img-placeholder">
+              <span>PHOTO: Bike</span>
+            </div>
+            <div class="profile-card__body">
+              <span class="profile-card__role">BOKE / WRITER</span>
+              <h3 class="profile-card__name">ばいく<span class="profile-card__ruby">Bike</span></h3>
+              <dl class="profile-card__meta">
+                <dt>生年月日</dt><dd>1996.04.12</dd>
+                <dt>出身地</dt><dd>東京都</dd>
+                <dt>趣味</dt><dd>散歩（目的地なし）、取扱説明書の誤字探し</dd>
+              </dl>
+              <p class="profile-card__comment">「舞台上では極力大きな声を出さないよう努力しています。」</p>
+            </div>
+          </article>
+
+          <!-- メンバー2 -->
+          <article class="profile-card">
+            <!-- 【画像差し替え箇所】パイプの顔写真 -->
+            <div class="profile-card__img-placeholder">
+              <span>PHOTO: Pipe</span>
+            </div>
+            <div class="profile-card__body">
+              <span class="profile-card__role">TSUKKOMI</span>
+              <h3 class="profile-card__name">パイプ<span class="profile-card__ruby">パイプ</span></h3>
+              <dl class="profile-card__meta">
+                <dt>生年月日</dt><dd>1997.08.29</dd>
+                <dt>出身地</dt><dd>神奈川県</dd>
+                <dt>趣味</dt><dd>カフェ巡り（コーヒーは飲めない）、観葉植物観察</dd>
+              </dl>
+              <p class="profile-card__comment">「ばいくの隣に立っている方の人間です。主に正論を言っています。」</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE -->
+    <section id="live" class="section section--dark">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">03</span>
+          <h2 class="section__title">LIVE / SCHEDULE</h2>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="live-table">
+            <thead>
+              <tr>
+                <th>DATE</th>
+                <th>EVENT</th>
+                <th>VENUE / TIME</th>
+                <th>PRICE</th>
+                <th>STATUS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="live-table__date">2026.11.15 <span class="badge">SOLO</span></td>
+                <td class="live-table__title">第4回単独公演「RE：REIWALAND」</td>
+                <td>ルミネ the よしもと<br><small>18:30開場 / 19:00開演</small></td>
+                <td>¥3,800</td>
+                <td><span class="status-tag status-tag--active">受付中</span><br><small class="status-note">※席はあります。笑いは保証しません。</small></td>
+              </tr>
+              <tr>
+                <td class="live-table__date">2026.11.28 <span class="badge">GUEST</span></td>
+                <td class="live-table__title">深夜の現代漫才寄席 Vol.12</td>
+                <td>渋谷プレジャーホール<br><small>21:00開場 / 21:30開演</small></td>
+                <td>¥2,500</td>
+                <td><span class="status-tag status-tag--sold">SOLD OUT</span><br><small class="status-note">立ち見も埋まりました</small></td>
+              </tr>
+              <tr>
+                <td class="live-table__date">2026.12.05 <span class="badge">TV</span></td>
+                <td class="live-table__title">「メタ視点お笑い演芸館」出演</td>
+                <td>日本テレビ系列<br><small>23:00〜23:30 放送予定</small></td>
+                <td>-</td>
+                <td><span class="status-tag">オンエア</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="section section--light">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">04</span>
+          <h2 class="section__title">VIDEO</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="video-card">
+            <a href="#" class="video-card__link">
+              <!-- 【画像差し替え箇所】サムネイル画像 -->
+              <div class="video-card__thumb-placeholder">
+                <span>THUMBNAIL (16:9)</span>
+              </div>
+              <div class="video-card__content">
+                <span class="video-card__duration">05:24</span>
+                <h3 class="video-card__title">漫才「エレベーターの沈黙」</h3>
+                <p class="video-card__desc">気まずい空間での思考回路を徹底的に客観視した一本。</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="video-card">
+            <a href="#" class="video-card__link">
+              <!-- 【画像差し替え箇所】サムネイル画像 -->
+              <div class="video-card__thumb-placeholder">
+                <span>THUMBNAIL (16:9)</span>
+              </div>
+              <div class="video-card__content">
+                <span class="video-card__duration">08:12</span>
+                <h3 class="video-card__title">漫才「高級タワマンのインターホン」</h3>
+                <p class="video-card__desc">住んだこともないタワマンのシステムに言いがかりをつけるネタ。</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="video-card">
+            <a href="#" class="video-card__link">
+              <!-- 【画像差し替え箇所】サムネイル画像 -->
+              <div class="video-card__thumb-placeholder">
+                <span>THUMBNAIL (16:9)</span>
+              </div>
+              <div class="video-card__content">
+                <span class="video-card__duration">12:05</span>
+                <h3 class="video-card__title">ラジオ作業用「永遠に決着がつかない議論」</h3>
+                <p class="video-card__desc">ポッドキャストの総集編。睡眠導入用にどうぞ。</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOODS -->
+    <section id="goods" class="section section--dark">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">05</span>
+          <h2 class="section__title">GOODS</h2>
+        </div>
+
+        <div class="card-grid card-grid--3col">
+          <article class="goods-card">
+            <!-- 【画像差し替え箇所】グッズ写真 -->
+            <div class="goods-card__img-placeholder">
+              <span>GOODS IMAGE</span>
+            </div>
+            <div class="goods-card__body">
+              <h3 class="goods-card__title">主張の激しくないロンT</h3>
+              <p class="goods-card__price">¥4,500 <small>(tax in)</small></p>
+              <p class="goods-card__desc">胸元に極小サイズで「LAND」とだけ刺繍してあります。街でバレません。</p>
+            </div>
+          </article>
+
+          <article class="goods-card">
+            <!-- 【画像差し替え箇所】グッズ写真 -->
+            <div class="goods-card__img-placeholder">
+              <span>GOODS IMAGE</span>
+            </div>
+            <div class="goods-card__body">
+              <h3 class="goods-card__title">ロゴ入りステッカーセット (3枚組)</h3>
+              <p class="goods-card__price">¥800 <small>(tax in)</small></p>
+              <p class="goods-card__desc">PCのりんごマークの上に貼るのにちょうどいいサイズ感です。</p>
+            </div>
+          </article>
+
+          <article class="goods-card">
+            <!-- 【画像差し替え箇所】グッズ写真 -->
+            <div class="goods-card__img-placeholder">
+              <span>GOODS IMAGE</span>
+            </div>
+            <div class="goods-card__body">
+              <h3 class="goods-card__title">RE：REIWALAND 収録台本ノート</h3>
+              <p class="goods-card__price">¥1,200 <small>(tax in)</small></p>
+              <p class="goods-card__desc">単独公演の没ネタ台本が裏表紙に密かに印刷されている方眼ノート。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section id="links" class="section section--light">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">06</span>
+          <h2 class="section__title">OFFICIAL LINKS</h2>
+        </div>
+
+        <ul class="link-list">
+          <li>
+            <a href="#" target="_blank" rel="noopener" class="link-list__item">
+              <span class="link-list__platform">YouTube</span>
+              <span class="link-list__name">令和ランド 公式チャンネル</span>
+              <span class="link-list__arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener" class="link-list__item">
+              <span class="link-list__platform">Podcast</span>
+              <span class="link-list__name">令和の夜 (Spotify / Apple)</span>
+              <span class="link-list__arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener" class="link-list__item">
+              <span class="link-list__platform">X (Twitter)</span>
+              <span class="link-list__name">@reiwa_land_official</span>
+              <span class="link-list__arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener" class="link-list__item">
+              <span class="link-list__platform">Instagram</span>
+              <span class="link-list__name">@reiwa_land_official</span>
+              <span class="link-list__arrow">→</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--dark">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <span class="section__label">07</span>
+          <h2 class="section__title">CONTACT</h2>
+        </div>
+
+        <p class="contact-lead">
+          ライブ出演・メディア出演・執筆依頼などのお問い合わせは下記フォームよりお願いいたします。<br>
+          ※個人的な人生相談にはお答えしかねますのでご了承ください。
+        </p>
+
+        <form action="#" method="post" class="contact-form">
+          <div class="form-group">
+            <label for="name">お名前 <span class="required">必須</span></label>
+            <input type="text" id="name" name="name" required placeholder="山田 太郎">
+          </div>
+
+          <div class="form-group">
+            <label for="company">貴社名・媒体名</label>
+            <input type="text" id="company" name="company" placeholder="株式会社〇〇 / WEBメディア名">
+          </div>
+
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">必須</span></label>
+            <input type="email" id="email" name="email" required placeholder="example@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="type">ご依頼種別 <span class="required">必須</span></label>
+            <select id="type" name="type" required>
+              <option value="">選択してください</option>
+              <option value="live">ライブ・イベント出演</option>
+              <option value="media">TV・ラジオ・WEB出演</option>
+              <option value="writing">コラム・記事執筆</option>
+              <option value="other">その他のお問い合わせ</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+            <textarea id="message" name="message" rows="6" required placeholder="日時、場所、予算感などの詳細をご記載いただけますとスムーズです。"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">送信する</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__notice">※このWEBサイトはフィクションです。実在の人物・団体とは関係ありません。</p>
+      <p class="footer__copy">&copy; REIWA LAND All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
 </html>
